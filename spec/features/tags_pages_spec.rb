@@ -110,7 +110,7 @@ describe "Tags pages" do
 
         describe 'with invalid information' do
           it 'should not create a tag' do
-            expect { click_button 'Create' }.should_not change(Tag, :count)
+            expect { click_button 'Create' }.to_not change(Tag, :count)
           end
 
           describe 'on error messages' do
@@ -126,7 +126,7 @@ describe "Tags pages" do
           end
 
           it 'should create a tag' do
-            expect { click_button 'Create' }.should change(Tag, :count)
+            expect { click_button 'Create' }.to change(Tag, :count)
           end
 
           describe 'on success messages' do

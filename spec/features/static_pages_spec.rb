@@ -5,7 +5,7 @@ describe 'Static pages' do
   subject { page }
 
   shared_examples_for 'all static pages' do
-    it { should have_selector('title', :text => full_title(page_title)) }
+    it { should have_page_title page_title }
   end
 
   describe 'Home page' do
@@ -14,7 +14,7 @@ describe 'Static pages' do
     let(:page_title) { '' }
 
     it_should_behave_like 'all static pages'
-    it { should_not have_selector('title', :text => 'Home -') }
+    it { should_not have_page_title 'Home -' }
   end
 
   describe 'Contact page' do
@@ -36,16 +36,16 @@ describe 'Static pages' do
   it 'should have the right links on the layout' do
     visit root_path
     click_link 'Contact'
-    page.should have_selector('title', :text => full_title('Contact'))
+    page.should have_page_title 'Contact'
     click_link 'Home'
-    page.should have_selector('title', :text => full_title(''))
+    page.should have_page_title ''
     click_link 'Sign in'
-    page.should have_selector('title', :text => full_title('Sign in'))
+    page.should have_page_title 'Sign in'
     click_link 'Articles'
-    page.should have_selector('title', :text => full_title('Articles'))
+    page.should have_page_title 'Articles'
     click_link 'Events'
-    page.should have_selector('title', :text => full_title('Events'))
+    page.should have_page_title 'Events'
     click_link 'FAQ'
-    page.should have_selector('title', :text => full_title('Frequently Asked Questions'))
+    page.should have_page_title 'Frequently Asked Questions'
   end
 end

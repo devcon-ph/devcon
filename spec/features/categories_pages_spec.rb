@@ -132,7 +132,7 @@ describe "Categories pages" do
 
           it 'should not create a category' do
 
-            expect { click_button 'Create' }.should_not change(Category, :count)
+            expect { click_button 'Create' }.to_not change(Category, :count)
           end
 
           describe 'on error messages' do
@@ -152,7 +152,7 @@ describe "Categories pages" do
 
           it 'should create a category' do
 
-            expect { click_button 'Create' }.should change(Category, :count).by(1)
+            expect { click_button 'Create' }.to change(Category, :count).by(1)
           end
 
           describe 'on success messages' do
@@ -213,7 +213,7 @@ describe "Categories pages" do
         end
 
         it 'should destroy the category' do
-          expect { click_link "Destroy" }.should change(Category, :count).by(-1)
+          expect { click_link "Destroy" }.to change(Category, :count).by(-1)
         end
 
         describe 'on notice messages' do

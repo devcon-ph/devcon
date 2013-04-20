@@ -139,7 +139,7 @@ describe 'Articles pages' do
           end
 
           it { should have_link 'Edit', :href => edit_article_path(@article) }
-          it { should have_link 'Destroy', :method => :delete, :href => article_path(@article) }
+          it { should have_delete_link 'Destroy', article_path(@article) }
         end
       end
 
@@ -159,7 +159,7 @@ describe 'Articles pages' do
         describe 'when author is the one who made the article' do
 
           it { should have_link 'Edit', :href => edit_article_path(@article) }
-          it { should have_link 'Destroy', :method => :delete, :href => article_path(@article) }
+          it { should have_delete_link 'Destroy', article_path(@article) }
         end
 
         describe 'when author is not the one who made the article' do
@@ -173,7 +173,7 @@ describe 'Articles pages' do
           end
 
           it { should_not have_link 'Edit', :href => edit_article_path(@article) }
-          it { should_not have_link 'Destroy', :method => :delete, :href => article_path(@article) }
+          it { should_not have_delete_link 'Destroy', article_path(@article) }
         end
       end
 
@@ -192,7 +192,7 @@ describe 'Articles pages' do
 
           it 'should not create an article' do
             
-            expect { click_button 'Create' }.should_not change(Article, :count)
+            expect { click_button 'Create' }.to_not change(Article, :count)
           end
 
           describe 'on error messages' do
@@ -213,7 +213,7 @@ describe 'Articles pages' do
 
           it 'should create an article' do
             
-            expect { click_button 'Create' }.should change(Article, :count).by(1)
+            expect { click_button 'Create' }.to change(Article, :count).by(1)
           end
 
           describe 'on success messages' do
@@ -266,7 +266,7 @@ describe 'Articles pages' do
         end
 
         it 'should destroy the article' do
-          expect { click_link "Destroy" }.should change(Article, :count).by(-1)
+          expect { click_link "Destroy" }.to change(Article, :count).by(-1)
         end
 
         it 'should have a notice message' do

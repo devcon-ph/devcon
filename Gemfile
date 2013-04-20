@@ -18,11 +18,11 @@ gem 'unicorn'
 gem 'htmlentities'
 gem 'icalendar'
 
-gem 'pg', '0.14.1'
+gem 'pg', '0.15.0'
 
 group :development, :test do
-  gem 'rspec-rails', '2.9.0'
-  gem 'database_cleaner', '0.8.0'
+  gem 'rspec-rails', '2.13.0'
+  gem 'database_cleaner', '0.9.1'
   gem 'annotate', '~> 2.4.1.beta'
   gem 'pry'
   gem 'capistrano'
@@ -45,7 +45,7 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
 group :test do
-  gem 'capybara', '1.1.2'
+  gem 'capybara', '2.1.0'
   gem 'launchy'
   gem 'fabrication', '2.5.4'
   gem 'spork'
