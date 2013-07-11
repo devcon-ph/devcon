@@ -16,6 +16,8 @@ gem 'mini_magick'
 gem 'unicorn'
 gem 'htmlentities'
 gem 'icalendar'
+#gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 
 gem 'pg', '0.15.1'
 

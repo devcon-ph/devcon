@@ -19,7 +19,8 @@ This is a Ruby 2.0 + Rails 3.2 + PostgreSQL app so running a local copy should l
     cp config/database.yml.example config/database.yml
     vim config/database.yml
     rake db:create
-    rake db:test:prepare && rake db:migrate
+    rake db:test:prepare
+    rake db:migrate
     guard
 
 Guard will run both the Unicorn server at port 3000 and the specs.
