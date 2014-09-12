@@ -9,13 +9,6 @@
 } %>
 <h1>Events</h1>
 
-<%= link_to 'Event Map', map_events_path, :class => 'btn btn-default' %>
-<%= link_to 'iCalendar', calendar_path, :class => 'btn btn-default' %>
-
-<% if can? :create, Event %>
-  <%= link_to 'New event', new_event_path, :class => "btn btn-default" %>
-<% end %>
-
 <% unless @current_events.empty? %>
   <div class="row">
     <div class="col-sm-12">

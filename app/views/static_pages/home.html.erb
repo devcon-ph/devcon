@@ -16,13 +16,46 @@
       </h1>
       <p class="blurb"><strong>Developers Connect Philippines (DevCon)</strong> is a non-proﬁt organization which aims to promote the "IT Pinoy Talent" mainly by providing a unique venue for IT students, educators, professionals and enthusiasts to <em>Sync, Support and Succeed.</em></p>
     </div>
-    <div class="col-md-12 avp">
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/hMwDI_nv5xU?rel=0" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
   </div>
 </div>
+<hr>
+<div class="row maker-fest">
+  <div class="col-md-12">
+    <h2>Welcome Maker Festival Manila 2014 Attendees!</h2>
+
+    <p>This is a special offline version of DevCon's official site (http://devcon.ph/). Many of the features are gone, but you can still browse around for information.</p>
+
+    <p>To earn your stamps, just choose among these two activities:</p>
+
+  </div>
+</div>
+<div class="row maker-fest">
+  <div class="col-sm-6">
+    <%= image_tag 'jcc_thumb.jpg', :class => "img-thumbnail" %>
+    <h3>Java Code Challenge</h3>
+
+    <p>This is a stripped-down version of the Java programming competition that we conduct in some <%= link_to "Campus DevCon Events", events_main_path %>. This app automatically compiles and checks whether the code is correct or not.</p>
+
+    <p>Sign-up and solve 3 (very easy) problems to earn your stamp.<br>Solve 5 or more problems and you'll earn a small prize.</p>
+
+    <p>We recommend you use a laptop for this activity.</p>
+
+    <p><%= link_to "Solve the problems &raquo;".html_safe, root_url + "/jcc", :class => "btn btn-default btn-success btn-lg" %></p>
+  </div>
+  <div class="col-sm-6">
+    <%= image_tag 'gunner.jpg', :class => "img-thumbnail" %>
+    <h3>H.A.B.A.G.A.T.</h3>
+
+    <p>This is an extended version of the HTML5 game that we taught in one of our <%= link_to "Code Camps", events_main_path %>. This is a clone of certain type of arcade shooting game.</p>
+
+    <p>Destroy 1250 enemies without dying to earn your stamp.<br>Destroy more 4000 or more and you'll earn a small prize.</p>
+
+    <p>We recommend you use a laptop with a mouse/decent touchpad, or a tablet/mid-range smartphone for this activity.</p>
+
+    <p><%= link_to "Play the game &raquo;".html_safe, root_url + "/habagat", :class => "btn btn-default btn-success btn-lg" %></p>
+  </div>
+</div>
+<hr>
 <hr>
 <div class="row devise-row">
   <div class="col-sm-3">
@@ -73,34 +106,5 @@
       <a href="http://acale.ph/"><%= image_tag "acaleph.png", :alt => "Acaleph" %></a>
       <a href="http://www.foodpanda.ph/"><%= image_tag "foodpanda.png", :alt => "Foodpanda" %></a>
     </p>
-  </div>
-</div>
-<div class="row frontpage-lists">
-  <div class="col-md-6 frontpage-twitter">
-    <a class="twitter-timeline" href="https://twitter.com/DevConPH" data-widget-id="309122045189427200">Tweets by @DevConPH</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  </div>
-  <div class="col-md-6 events">
-    <h2><%= @events_type %></h3>
-    <% @events.each do |event| %>
-      <div class="row">
-        <div class="col-sm-2 col-md-3 col-lg-2">
-          <%= image_tag event.logo.small %>
-        </div>
-        <div class="col-sm-10 col-md-9 col-lg-10">
-          <h3><%= link_to event.name, event, :class => 'title' %></h3>
-          <p><small>
-            <%= l(event.start_at, :format => :long) %> 
-            <% if event.start_at.future? %>
-              (<%= distance_of_time_in_words_to_now event.start_at %> from now)
-            <% else %>
-              to
-              <%= l(event.end_at, :format => :long) %> 
-            <% end %>
-          </small></p>
-        </div>
-      </div>
-    <% end %>
-    <p><%= link_to "View full list of Events &raquo".html_safe, events_path, :class => "btn btn-success btn-lg" %></p>
   </div>
 </div>
