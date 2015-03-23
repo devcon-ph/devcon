@@ -14,7 +14,6 @@ SitemapGenerator::Sitemap.create do
   add notifications_path
   add get_involved_path
   add volunteer_path
-  add speaker_path
   add sponsor_path
 
   add articles_path, :priority => 0.7
