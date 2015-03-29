@@ -12,8 +12,14 @@
   <% end %>
   <%= f.association :parent %>
   <%= f.input :logo, :as => :file, :hint => "a square logo, at least 200px x 200px" %>
+  <% if @event.logo? %>
+    <div>current logo: <%= image_tag @event.logo.thumb.url %></div>
+  <% end %>
   <%= f.input :remove_logo, :as => :boolean, :hint => "tick to remove existing logo" %>
   <%= f.input :cover_photo, :as => :file, :hint => "at least 940px x 315px" %>
+  <% if @event.cover_photo? %>
+    <div>current cover photo: <%= image_tag @event.cover_photo.cover.url %></div>
+  <% end %>
   <%= f.input :remove_cover_photo, :as => :boolean, :hint => "tick to remove existing cover photo" %>
   <%= f.input :summary, :input_html => { class: 'input-xxlarge editor-html', size: "500x6" } %>
   <%= f.association :venue %>
