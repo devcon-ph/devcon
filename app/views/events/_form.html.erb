@@ -12,7 +12,9 @@
   <% end %>
   <%= f.association :parent %>
   <%= f.input :logo, :as => :file, :hint => "a square logo, at least 200px x 200px" %>
+  <%= f.input :remove_logo, :as => :boolean, :hint => "tick to remove existing logo" %>
   <%= f.input :cover_photo, :as => :file, :hint => "at least 940px x 315px" %>
+  <%= f.input :remove_cover_photo, :as => :boolean, :hint => "tick to remove existing cover photo" %>
   <%= f.input :summary, :input_html => { class: 'input-xxlarge editor-html', size: "500x6" } %>
   <%= f.association :venue %>
   <%= f.input :start_at, :as => :string, :input_html => { :class => "datetimepicker", :value => text_field_datetime(@event.start_at) } %>

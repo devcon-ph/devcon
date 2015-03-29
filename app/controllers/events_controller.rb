@@ -71,7 +71,8 @@ class EventsController < ApplicationController
     def event_params
       params.require(:event).permit(:description, :description, :devcon_role, :end_at, :logo, :cover_photo,
         :name, :parent_id, :slug, :start_at, :venue_id, :summary, :schedule, :rules, 
-        :registration, :event_type, :target_attendees, :actual_attendees)
+        :registration, :event_type, :target_attendees, :actual_attendees,
+        :remove_logo, :remove_cover_photo)
     end
 
 end
