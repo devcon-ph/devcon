@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 4.2.0'
 gem 'bootstrap-sass', '~> 3.3.3'
-gem 'devise', '~> 3.4.0'
+gem 'devise', '~> 3.5.0'
 gem 'simple_form', '~> 3.1.0'
 gem 'will_paginate', '~> 3.0.4'
 gem 'bootstrap-will_paginate', '0.0.10'
@@ -18,7 +18,7 @@ gem 'htmlentities'
 gem 'icalendar'
 #gem 'omniauth-twitter'
 gem 'omniauth-facebook'
-gem 'coveralls', '~> 0.7.2', require: false
+gem 'coveralls', '~> 0.8.1', require: false
 
 gem 'pg', '~> 0.18.0'
 
