@@ -28,7 +28,7 @@ gem 'jquery-ui-rails'
 gem 'sitemap_generator'
 
 group :development do
-  gem 'capistrano', '~> 3.3.5'
+  gem 'capistrano', '~> 3.4.0'
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-bundler'
   gem 'better_errors'
@@ -46,9 +46,9 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.2.0'
+  gem 'rspec-rails', '~> 3.3.0'
   gem 'pry'
-  gem 'fabrication', '~> 2.12.0'
+  gem 'fabrication', '~> 2.13.0'
   gem 'faker'
   gem 'database_cleaner', '~> 1.4.0'
   gem 'capybara', '~> 2.4.1'
