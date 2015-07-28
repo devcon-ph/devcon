@@ -457,6 +457,10 @@ footer, .footer {
   }
   .article-content {
     padding-bottom: 30px;
+    padding-top: 30px;
+    .nav-buttons {
+      padding-top: 30px;
+    }
   }
 }
 

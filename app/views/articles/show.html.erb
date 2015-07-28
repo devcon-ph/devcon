@@ -37,7 +37,7 @@
     </small></p>
     <div class="article-content">
       <%= raw @article.content %>
-      <p>
+      <p class="nav-buttons">
         <%= link_to 'Back to articles', articles_path, :class => "btn btn-default" %>
   <% end %>
         <% if can? :update, @article %>
