@@ -19,7 +19,7 @@ class StaticPagesController < ApplicationController
   def feed
     @title = "Developers Connect Philippines"
     @entries = 
-      (Event.include_subevents.all + Article.where(published: true))
+      (Event.include_subevents.all + Article.where(draft: false).all)
       .sort_by(&:updated_at).reverse
     @updated = unless @entries.empty?
       @entries.first.updated_at
