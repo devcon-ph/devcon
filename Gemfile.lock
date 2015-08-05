@@ -124,7 +124,7 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.7)
     execjs (2.5.2)
-    fabrication (2.13.2)
+    fabrication (2.14.0)
     faker (1.4.3)
       i18n (~> 0.5)
     faraday (0.9.1)
@@ -383,7 +383,7 @@ DEPENDENCIES
   coveralls (~> 0.8.1)
   database_cleaner (~> 1.4.0)
   devise (~> 3.5.0)
-  fabrication (~> 2.13.0)
+  fabrication (~> 2.14.0)
   faker
   gmaps4rails (~> 2.1.2)
   growl
