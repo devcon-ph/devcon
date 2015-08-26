@@ -51,7 +51,7 @@ group :development, :test do
   gem 'fabrication', '~> 2.14.0'
   gem 'faker'
   gem 'database_cleaner', '~> 1.4.0'
-  gem 'capybara', '~> 2.4.1'
+  gem 'capybara', '~> 2.5.0'
   gem 'launchy'
   gem 'spork', '~> 1.0.0rc4'
   gem 'simplecov', :require => false
