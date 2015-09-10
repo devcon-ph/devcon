@@ -19,6 +19,7 @@
         <li><%= link_to 'Gallery', 'https://www.facebook.com/DevConPH/photos_stream' %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'DevCon Summit 2015', 'http://summit.devcon.ph', style: "color:#61a400" %></li>
         <% if user_signed_in? %>
           <% if current_user.role? "admin" %>
             <li id="fat-menu" class="dropdown">
