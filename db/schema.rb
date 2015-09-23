@@ -11,23 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150114111022) do
+ActiveRecord::Schema.define(version: 20150923124148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "articles", force: :cascade do |t|
-    t.string   "title",        limit: 255
+    t.string   "title",           limit: 255
     t.text     "content"
     t.integer  "author_id"
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
-    t.string   "slug",         limit: 255
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
+    t.string   "slug",            limit: 255
     t.text     "summary"
-    t.string   "thumbnail",    limit: 255
-    t.boolean  "published",                default: false
+    t.string   "thumbnail",       limit: 255
+    t.boolean  "published",                   default: false
     t.datetime "published_at"
-    t.boolean  "draft",                    default: false
+    t.boolean  "draft",                       default: false
+    t.string   "opengraph_image"
   end
 
   add_index "articles", ["author_id", "created_at"], name: "index_articles_on_author_id_and_created_at", using: :btree
@@ -182,6 +183,6 @@ ActiveRecord::Schema.define(version: 20150114111022) do
   end
 
   add_index "venues", ["display"], name: "index_venues_on_display", using: :btree
-  add_index "venues", ["slug"], name: "index_venues_on_slug", unique: true, using: :btree
+  add_index "venues", ["slug"], name: "index_venues_on_slug", using: :btree
 
 end

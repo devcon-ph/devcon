@@ -36,6 +36,14 @@ module ApplicationHelper
     path_to_image("opengraph_default_thumbnail.png")
   end
 
+  def article_opengraph_url(article)
+    if article.opengraph_image.nil?
+      [opengraph_thumb_url, { :width => 200, :height => 200 }]
+    else
+      [article.opengraph_image.opengraph.url, { :width => 1200, :height => 630 }]
+    end
+  end
+
   def text_field_datetime(datetime)
     l(datetime.nil? ? Time.zone.now : datetime)
   end

@@ -15,6 +15,7 @@
 
   <%= render :partial => "shared/view_thumbnail", :locals => { :obj => @article } %>
   <%= f.input :thumbnail, :as => :file %>
+  <%= f.input :opengraph_image, :as => :file %>
   <%= f.input :content,
               :as => :ckeditor %>
   <%= f.input :summary, :input_html => { class: 'input-xxlarge editor-html', size: "500x6" }, :hint => "A shorter description for use in places where the full description would be overkill." %>

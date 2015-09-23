@@ -34,6 +34,7 @@ class Article < ActiveRecord::Base
   before_validation :generate_slug, :generate_summary
 
   mount_uploader :thumbnail, ThumbnailUploader
+  mount_uploader :opengraph_image, OpengraphUploader
 
   def generate_slug
     self.slug ||= title.to_slug.normalize.to_s
