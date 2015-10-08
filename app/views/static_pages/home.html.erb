@@ -6,6 +6,14 @@
   :url   => root_url,
   :image => [opengraph_thumb_url, { :width => 200, :height => 200 }]
 } %>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div class="jumbotron">
   <div class="row">
     <div class="col-md-12">
@@ -102,6 +110,6 @@
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </div>
   <div class="col-md-6 frontpage-twitter">
-    <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fdevconph&amp;width&amp;height=427&amp;colorscheme=light&amp;show_faces=false&amp;header=true&amp;stream=true&amp;show_border=true&amp;appId=488047311326879" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:400px; width:100%" allowTransparency="true"></iframe>
+    <div class="fb-page" data-href="https://www.facebook.com/DevConPH" data-width="500" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/DevConPH"><a href="https://www.facebook.com/DevConPH">DevCon Philippines</a></blockquote></div></div>    
   </div>
 </div>
