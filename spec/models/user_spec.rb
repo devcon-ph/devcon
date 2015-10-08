@@ -55,7 +55,7 @@ describe User, :type => :model do
   it { is_expected.to allow_value('A_USER@f.b.org').for(:email) }
   it { is_expected.to allow_value('frst.lst@foo.jp').for(:email) }
   it { is_expected.to allow_value('a+b@baz.cn').for(:email) }
-  it { is_expected.to validate_uniqueness_of(:email) }
+  it { is_expected.to validate_uniqueness_of(:email).case_insensitive }
 
   describe 'when password is not present' do
     before { @user.password = @user.password_confirmation = ' ' }
