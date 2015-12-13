@@ -68,7 +68,3 @@ end
 gem 'sass-rails',   '~> 5.0.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'uglifier', '~> 2.7.0'
-
-group :production do
-  gem 'newrelic_rpm'
-end
