@@ -17,7 +17,7 @@ end
 def omniauth_signin
   visit root_path
   click_link 'Sign in'
-  find(:xpath, "//a/img[@alt='Fblogin']/..").click
+  find(:xpath, "//a/img[contains(@alt,'Fblogin')]/..").click
 end
 
 RSpec::Matchers.define :have_error_message do |message|
