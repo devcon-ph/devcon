@@ -15,5 +15,12 @@ if Object.const_defined?("Ckeditor")
     # Set to nil or [] (empty array) for all file types
     # config.attachment_file_types = ["doc", "docx", "xls", "odt", "ods", "pdf", "rar", "zip", "tar", "swf"]
     config.assets_languages = ['en']
+
+    config.authorize_with :cancan
+  end
+  if Rails.env.test? or Rails.env.cucumber?
+    CarrierWave.configure do |config|
+      config.storage = :file
+    end
   end
 end

@@ -2,7 +2,7 @@ require 'spork'
 require 'simplecov'
 require 'coveralls'
 
-SimpleCov.formatters = [
+SimpleCov.formatters = SimpleCov::Formatter::MultiFormatter.new [
   SimpleCov::Formatter::HTMLFormatter,
   Coveralls::SimpleCov::Formatter
 ]
