@@ -1,6 +1,6 @@
 Fabricator(:event_partner) do
-  references   ""
-  references   ""
+  event
+  entity
   role         "MyString"
   custom_blurb "MyText"
 end

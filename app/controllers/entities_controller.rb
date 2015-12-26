@@ -10,7 +10,7 @@ class EntitiesController < ApplicationController
   end
 
   def create
-    @entity = @entity.create(entity_params)
+    @entity = Entity.create(entity_params)
     if @entity.save
       redirect_to entity_path(@entity), :notice => "Entity successfully created"
     else

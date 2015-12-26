@@ -4,6 +4,6 @@ Fabricator(:entity) do
   description "MyText"
   blurb       "MyText"
   logo        "MyString"
-  type        ""
-  level       "MyString"
+  type        "school"
+  level       "cool"
 end
