@@ -6,5 +6,6 @@ script:
   - bundle exec rake db:test:prepare
   - bundle exec rspec spec
 before_script:
+  - gem update bundler
   - cp config/database.travis.yml config/database.yml
   - psql -c 'create database devcon_test' -U postgres
