@@ -18,7 +18,7 @@
       <%= event.summary %>
       <% if can? :manage, Event %>
         <%= link_to "Edit", edit_event_path(event), :class => "btn btn-default btn-xs" %>
-        <%= link_to "Destroy", event, :confirm => 'Are you sure?', :method => :delete, :class => "btn btn-danger btn-xs" %>
+        <%= link_to "Destroy", event, :data => { :confirm => 'Are you sure you want to delete this?' }, :method => :delete, :class => "btn btn-danger btn-xs" %>
       <% end %>
     </p>
     <% unless event.subevents.empty? %>

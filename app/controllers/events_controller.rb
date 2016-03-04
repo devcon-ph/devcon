@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   load_resource :find_by => :slug
-  load_and_authorize_resource :except => [:index, :previous, :ics, :map] 
+  load_and_authorize_resource :except => [:index, :previous, :ics, :map, :destroy]
 
   def index
     @current_events = Event.current.include_subevents
@@ -64,6 +64,11 @@ class EventsController < ApplicationController
       marker.json({ :id => event.venue.slug })
     end
     render :map, :layout => false
+  end
+
+  def destroy
+    @event.destroy
+    redirect_to events_path, :notice => "Event successfully deleted"
   end
 
   private
