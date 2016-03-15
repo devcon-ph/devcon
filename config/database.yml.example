@@ -41,7 +41,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: devcon_test
+  database: devcon_test<%= ENV['TEST_ENV_NUMBER'] %>
   pool: 5
   username: devcon
   password: devcon

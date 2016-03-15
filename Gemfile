@@ -63,6 +63,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'quiet_assets'
   gem 'rack-livereload'
+  gem 'parallel_tests'
 end
 
 gem 'sass-rails',   '~> 5.0.0'
