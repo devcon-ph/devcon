@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.2.0'
 gem 'nokogiri', '~> 1.6.7.rc4'
 gem 'bootstrap-sass', '~> 3.3.3'
-gem 'devise', '~> 3.5.0'
+gem 'devise', '~> 4.1.1'
 gem 'simple_form', '~> 3.2.0'
-gem 'will_paginate', '~> 3.0.4'
+gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'ckeditor', '~> 4.1.2'
 gem 'meta-tags', :require => 'meta_tags'
@@ -48,7 +48,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.4.0'
-  gem 'pry'
+  gem 'pry-byebug'
   gem 'fabrication', '~> 2.14.0'
   gem 'faker'
   gem 'database_cleaner', '~> 1.5.0'
@@ -66,6 +66,6 @@ group :development, :test do
   gem 'parallel_tests'
 end
 
-gem 'sass-rails',   '~> 5.0.0'
+gem 'sassc-rails'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'uglifier', '~> 2.7.0'
+gem 'uglifier', '~> 3.0.0'

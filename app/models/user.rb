@@ -29,6 +29,8 @@ class User < ActiveRecord::Base
 
   has_many :authentications, :dependent => :destroy
 
+  validates :email, :presence => true, :email => true
+
   ROLES = %w[admin moderator author]
 
   def roles=(roles)
