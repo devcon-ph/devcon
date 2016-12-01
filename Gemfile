@@ -24,7 +24,7 @@ gem 'coveralls', '~> 0.8.1', require: false
 gem 'pg', '~> 0.18.0'
 
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '5.0.5'
 
 gem 'sitemap_generator'
 
