@@ -25,14 +25,6 @@ describe 'Static pages', :type => :feature do
     it_should_behave_like 'all static pages'
   end
 
-  describe 'FAQ page' do
-    before { visit faq_path }
-    let(:heading)    { 'Frequently Asked Questions' }
-    let(:page_title) { 'Frequently Asked Questions' }
-
-    it_should_behave_like 'all static pages'
-  end
-
   it 'should have the right links on the layout' do
     visit root_path
     click_link 'Contact'
