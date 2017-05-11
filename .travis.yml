@@ -10,3 +10,4 @@ before_script:
   - psql -c 'create database devcon_test' -U postgres
 before_install:
   - gem update bundler
+  - sudo apt-get install -y ghostscript
