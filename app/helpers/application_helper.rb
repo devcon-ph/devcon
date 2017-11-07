@@ -44,6 +44,14 @@ module ApplicationHelper
     end
   end
 
+  def article_opengraph_image_src(article)
+    if article.opengraph_image.nil?
+      opengraph_thumb_url
+    else
+      article.opengraph_image.opengraph.url
+    end
+  end
+
   def text_field_datetime(datetime)
     l(datetime.nil? ? Time.zone.now : datetime)
   end

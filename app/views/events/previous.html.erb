@@ -6,7 +6,7 @@
   :type  => :article,
   :url   => previous_events_url,
   :image => opengraph_thumb_url
-} %>
+}, :image_src => opengraph_thumb_url %>
 <h1>Previous Events</h1>
 
 <% @previous_events.each do |month, event_group| %>

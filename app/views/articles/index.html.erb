@@ -6,7 +6,7 @@
   :type  => :article,
   :url   => articles_url,
   :image => [opengraph_thumb_url, { :width => 200, :height => 200 }]
-} %>
+}, :image_src => opengraph_thumb_url %>
 <h1>Articles</h1>
 <% if can? :create, Article %>
   <p>

@@ -1,12 +1,13 @@
 <% title @article.title %>
 <% description generate_description(@article.summary) %>
-<% set_meta_tags :open_graph => {
+<% set_meta_tags :og => {
   :title => "#{@article.title} | #{ENV['title']}",
   :description => generate_description(@article.summary),
   :type  => :article,
   :url   => article_url(@article),
   :image => article_opengraph_url(@article)
-} %>
+}, :image_src => article_opengraph_image_src(@article)
+%>
 
 <div class="row article">
   <% cache [@article, "top"] do %>

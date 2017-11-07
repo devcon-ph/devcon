@@ -6,7 +6,7 @@
   :type  => :article,
   :url   => event_url(@event),
   :image => [thumbnail_url(@event), { :width => 200, :height => 200 }]
-} %>
+}, :image_src => thumbnail_url(@event) %>
 <% content_for :scripts do %>
   <%= render "gmaps" %>
 <% end %>
