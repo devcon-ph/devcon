@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://devcon.ph"
+SitemapGenerator::Sitemap.default_host = "https://archive.devcon.ph"
 
 SitemapGenerator::Sitemap.create do
   add faq_path
