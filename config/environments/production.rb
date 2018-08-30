@@ -84,5 +84,8 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
   # Required by Devise
-  config.action_mailer.default_url_options = { :host => 'devcon.ph' }
+  config.action_mailer.default_url_options = { :host => 'archive.devcon.ph' }
+  # Update default_url_options host for action controller
+  config.action_controller.default_url_options[:host] = 'archive.devcon.ph'
+
 end
